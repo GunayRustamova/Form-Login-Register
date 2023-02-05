@@ -1,0 +1,32 @@
+﻿@model LoginVM
+@{
+    Layout = null;
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In Page</title>
+</head>
+<body>
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <div>
+        <form asp-action="Login" method="post" style="display: flex;
+    align-items: center; justify-content: center; flex-direction: column; width: 90%;
+    height: 500px;">
+        <label for="Email" asp-for="Email">E-mail:</label>
+        <input type="email" id="Email" name="Email" asp-for="Email"><br><br>
+        <label for="Password" asp-for="Password">Password:</label>
+        <input type="password" id="Password" name="Password" asp-for="Password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
